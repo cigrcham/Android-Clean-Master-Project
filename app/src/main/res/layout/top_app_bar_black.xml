@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:padding="@dimen/size_9">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterButton
+        android:id="@+id/btn_back"
+        android:layout_width="@dimen/size_40"
+        android:layout_height="@dimen/size_40"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_arrow_back_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="@dimen/size_50"
+        android:layout_marginStart="@dimen/size_20"
+        android:ellipsize="end"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_20"
+        app:layout_constraintEnd_toStartOf="@id/imgOpenMenu"
+        app:layout_constraintStart_toEndOf="@id/btn_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgOpenMenu"
+        android:layout_width="@dimen/size_50"
+        android:layout_height="@dimen/size_50"
+        android:padding="@dimen/size_23"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_toolbar_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutMenu"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_corners_20"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/size_10"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgOpenMenu"
+        app:layout_constraintWidth_percent="0.4">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSelectAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_10"
+            android:fontFamily="@font/inter_medium"
+            android:text="@string/select_all"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ctlArrow"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSelectAll">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ctlView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="@string/view"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgArrowRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_right"
+                    app:layout_constraintBottom_toBottomOf="@id/tvView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ctlSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <FrameLayout
+                    android:id="@+id/fmDisplay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tvDisplay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_medium"
+                        android:text="@string/display"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:src="@drawable/ic_arrow_down" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tvList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_5"
+                    android:layout_marginTop="@dimen/size_10"
+                    android:gravity="center"
+                    android:text="@string/list_view"
+                    app:drawableStartCompat="@drawable/ic_toolbar_change_view_linear"
+                    app:layout_constraintTop_toBottomOf="@id/fmDisplay" />
+
+                <TextView
+                    android:id="@+id/tvGrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_5"
+                    android:layout_marginTop="@dimen/size_10"
+                    android:gravity="center"
+                    android:text="@string/grid_view"
+                    app:drawableStartCompat="@drawable/ic_toolbar_change_view_grid"
+                    app:layout_constraintTop_toBottomOf="@id/tvList" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSortBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_10"
+            android:fontFamily="@font/inter_medium"
+            android:text="@string/sort_by"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ctlArrow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCreateFolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_10"
+            android:fontFamily="@font/inter_medium"
+            android:text="@string/create_folder"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSortBy" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

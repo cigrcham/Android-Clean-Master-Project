@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_300"
+    android:layout_marginEnd="2dp"
+    android:layout_weight="1"
+    android:background="#E9EAEE"
+    android:columnCount="3"
+    android:paddingStart="2dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="8dp"
+    android:rowCount="4"
+    tools:ignore="RtlSymmetry">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/lockNumber1"
+        style="@style/CustomButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_margin="4dp"
+        android:text="1"
+        android:textSize="@dimen/size_30" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/lockNumber2"
+        style="@style/CustomButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_margin="4dp"
+        android:text="2"
+        android:textSize="@dimen/size_30" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/lockNumber3"
+        style="@style/CustomButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_margin="4dp"
+        android:text="3"
+        android:textSize="@dimen/size_30" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/lockNumber4"
+        style="@style/CustomButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_margin="4dp"
+        android:text="4"
+        android:textSize="@dimen/size_30" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/lockNumber5"
+        style="@style/CustomButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_margin="4dp"
+        android:text="5"
+        android:textSize="@dimen/size_30" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/lockNumber6"
+        style="@style/CustomButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_margin="4dp"
+        android:text="6"
+        android:textSize="@dimen/size_30" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/lockNumber7"
+        style="@style/CustomButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_margin="4dp"
+        android:text="7"
+        android:textSize="@dimen/size_30" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/lockNumber8"
+        style="@style/CustomButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_margin="4dp"
+        android:text="8"
+        android:textSize="@dimen/size_30" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/lockNumber9"
+        style="@style/CustomButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_margin="4dp"
+        android:text="9"
+        android:textSize="@dimen/size_30" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/CustomButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_margin="4dp"
+        android:clickable="false"
+        android:textSize="@dimen/size_30" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/lockNumber0"
+        style="@style/CustomButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_margin="4dp"
+        android:text="@string/_0"
+        android:textSize="@dimen/size_30" />
+
+    <ImageButton
+        android:id="@+id/icon_delete"
+        style="@style/CustomButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_margin="4dp"
+        android:src="@drawable/delete_icon_1" />
+</GridLayout>

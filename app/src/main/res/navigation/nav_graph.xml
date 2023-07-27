@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_my_file">
+
+    <fragment
+        android:id="@+id/fragment_my_file"
+        android:name="com.phonecleaner.storagecleaner.cache.ui.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_fragment_my_file_to_detailsFolderFragment"
+            app:destination="@id/detailsFolderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFolderFragment"
+        android:name="com.phonecleaner.storagecleaner.cache.ui.fragment.DetailsFolderFragment"
+        android:label="DetailsFolderFragment" >
+        <action
+            android:id="@+id/action_detailsFolderFragment_to_fragment_my_file"
+            app:destination="@id/fragment_my_file" />
+    </fragment>
+</navigation>

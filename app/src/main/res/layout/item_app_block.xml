@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/size_16"
+    android:layout_marginTop="@dimen/size_8"
+    app:cardCornerRadius="@dimen/size_16">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size_8">
+
+        <ImageView
+            android:id="@+id/imgPreview"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="@dimen/size_0"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.13" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_12"
+            android:layout_marginEnd="@dimen/size_12"
+            app:layout_constraintBottom_toBottomOf="@id/imgPreview"
+            app:layout_constraintEnd_toStartOf="@id/btnOnOff"
+            app:layout_constraintStart_toEndOf="@id/imgPreview"
+            app:layout_constraintTop_toTopOf="@id/imgPreview" />
+
+        <Switch
+            android:id="@+id/btnOnOff"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_0"
+            android:thumb="@drawable/custom_thumb_setting"
+            android:track="@drawable/custom_track_setting"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

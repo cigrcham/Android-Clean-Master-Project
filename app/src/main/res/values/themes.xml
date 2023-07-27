@@ -1,0 +1,60 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CleanMaster" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.CleanMaster" parent="Base.Theme.CleanMaster" />
+
+    <style name="circleImage" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+        <item name="android:padding">5dp</item>
+    </style>
+    <style name="FullStatusDialog">
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/color_start_gradient</item>
+    </style>
+
+    <style name="rectangle_radius" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10%</item>
+        <item name="android:padding">5dp</item>
+    </style>
+    <style name="PropertiesDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="background">@drawable/bg_corners_20</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Các thuộc tính khác của theme -->
+        <item name="android:buttonStyle">@style/CustomButtonStyle</item>
+    </style>
+
+    <style name="CustomButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_border_radius</item>
+    </style>
+
+    <style name="CustomButtonStyle2" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_border_radius2</item>
+    </style>
+
+    <style name="CustomButtonStyle3" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_border_radius3</item>
+    </style>
+
+    <style name="RoundedCornersDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="dialogCornerRadius">@dimen/size_10</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+    </style>
+    <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+</resources>

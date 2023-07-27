@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clean_graph.xml"
+    app:startDestination="@id/coolerFragment">
+
+    <fragment
+        android:id="@+id/coolerFragment"
+        android:name="com.phonecleaner.storagecleaner.cache.ui.fragment.CoolerFragment"
+        android:label="fragment_cooler"
+        tools:layout="@layout/fragment_cooler" >
+        <action
+            android:id="@+id/action_coolerFragment_to_cpuCoolerFragment"
+            app:destination="@id/cpuCoolerFragment" />
+        <action
+            android:id="@+id/action_coolerFragment_to_scanRecoveryFileFragment"
+            app:destination="@id/scanRecoveryFileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cpuCoolerFragment"
+        android:name="com.phonecleaner.storagecleaner.cache.ui.fragment.CpuCoolerFragment"
+        android:label="fragment_cpu_cooler"
+        tools:layout="@layout/fragment_cpu_cooler" >
+        <action
+            android:id="@+id/action_cpuCoolerFragment_to_coolerFragment"
+            app:destination="@id/coolerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scanRecoveryFileFragment"
+        android:name="com.phonecleaner.storagecleaner.cache.ui.fragment.ScanRecoveryFileFragment"
+        android:label="ScanRecoveryFileFragment" >
+        <action
+            android:id="@+id/action_scanRecoveryFileFragment_to_coolerFragment"
+            app:destination="@id/coolerFragment" />
+        <action
+            android:id="@+id/action_scanRecoveryFileFragment_to_listFileRecoveryFragment"
+            app:destination="@id/listFileRecoveryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recoveryHistoryFragment"
+        android:name="com.phonecleaner.storagecleaner.cache.ui.fragment.RecoveryHistoryFragment"
+        android:label="RecoveryHistoryFragment" />
+    <fragment
+        android:id="@+id/detailsRecoveryFileFragment"
+        android:name="com.phonecleaner.storagecleaner.cache.ui.fragment.DetailsRecoveryFileFragment"
+        android:label="DetailsRecoveryFileFragment" />
+    <fragment
+        android:id="@+id/listFileRecoveryFragment"
+        android:name="com.phonecleaner.storagecleaner.cache.ui.fragment.ListFileRecoveryFragment"
+        android:label="ListFileRecoveryFragment" >
+        <action
+            android:id="@+id/action_listFileRecoveryFragment_to_coolerFragment"
+            app:destination="@id/coolerFragment" />
+    </fragment>
+</navigation>

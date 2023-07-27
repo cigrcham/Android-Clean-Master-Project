@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_132"
+    android:padding="@dimen/size_20">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/size_40"
+        android:layout_height="@dimen/size_40"
+        android:background="@drawable/background_button_analyze"
+        android:src="@drawable/ic_scan_junk_result" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_16"
+        android:layout_toRightOf="@id/image"
+        android:fontFamily="@font/inter_medium"
+        android:src="@drawable/ic_phone_cleaning"
+        android:text="@string/junk_cleaner"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_14"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvDec"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginStart="@dimen/size_16"
+        android:layout_toLeftOf="@id/imgClose"
+        android:layout_toRightOf="@id/image"
+        android:fontFamily="@font/inter_medium"
+        android:src="@drawable/ic_phone_cleaning"
+        android:text="@string/scan_junk_now"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_14" />
+
+    <ImageView
+        android:id="@+id/imgClose"
+        android:layout_width="@dimen/size_34"
+        android:layout_height="@dimen/size_34"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:padding="@dimen/size_5"
+        android:src="@drawable/ic_cancel_black" />
+
+    <TextView
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_34"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background_button_analyze"
+        android:gravity="center"
+        android:text="@string/clean"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

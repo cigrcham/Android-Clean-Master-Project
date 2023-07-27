@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_70"
+    android:background="@drawable/bg_dialog_bottom_sheet_app">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutCopy"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="@dimen/size_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.2">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgCopy"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="@dimen/size_0"
+            android:paddingVertical="@dimen/size_15"
+            android:src="@drawable/ic_bottom_sheet_copy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="@dimen/size_0"
+            android:layout_height="@dimen/size_0"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center"
+            android:text="@string/copy"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgCopy" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutMove"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="@dimen/size_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/layoutCopy"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.2">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgMove"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="@dimen/size_0"
+            android:paddingVertical="@dimen/size_15"
+            android:src="@drawable/ic_bottom_sheet_move"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="@dimen/size_0"
+            android:layout_height="@dimen/size_0"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center"
+            android:text="@string/move"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgMove" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutDelete"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="@dimen/size_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/layoutMove"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.2">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgRecycleBinDelete"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="@dimen/size_0"
+            android:paddingVertical="@dimen/size_15"
+            android:src="@drawable/ic_bottom_sheet_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="@dimen/size_0"
+            android:layout_height="@dimen/size_0"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center"
+            android:text="@string/delete"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgRecycleBinDelete" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutProperties"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="@dimen/size_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/layoutDelete"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.2">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgProperties"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="@dimen/size_0"
+            android:paddingVertical="@dimen/size_15"
+            android:src="@drawable/ic_bottom_sheet_properties"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProperties"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="@dimen/size_0"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center"
+            android:text="@string/properties"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgProperties" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutOpen"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="@dimen/size_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/layoutProperties"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.2">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgOpen"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="@dimen/size_0"
+            android:paddingVertical="@dimen/size_15"
+            android:src="@drawable/ic_bottom_sheet_open"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOpen"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="@dimen/size_0"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center"
+            android:text="@string/open_with"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgOpen" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

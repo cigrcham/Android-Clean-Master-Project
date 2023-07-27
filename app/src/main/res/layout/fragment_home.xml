@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/container_top"
+                layout="@layout/item_home_top_screen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                android:id="@+id/container_storage"
+                layout="@layout/item_home_storage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="-31dp"
+                android:layout_marginEnd="21dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/container_top" />
+
+            <include
+                android:id="@+id/container_detail_storage"
+                layout="@layout/item_home_detail_storage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_12"
+                android:layout_marginTop="@dimen/size_12"
+                android:layout_marginEnd="@dimen/size_36"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/container_storage" />
+
+            <ImageButton
+                android:id="@+id/btn_analyze"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50"
+                android:layout_margin="@dimen/size_21"
+                android:layout_marginTop="@dimen/size_26"
+                android:background="@drawable/background_button_analyze"
+                android:contentDescription="@string/analyze"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/container_detail_storage"
+                tools:ignore="VisualLintButtonSize,DuplicateSpeakableTextCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:text="@string/analyze"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_21"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_analyze"
+                app:layout_constraintEnd_toEndOf="@+id/btn_analyze"
+                app:layout_constraintStart_toStartOf="@+id/btn_analyze"
+                app:layout_constraintTop_toTopOf="@+id/btn_analyze" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/background_button_analyze_shimmer"
+                app:layout_constraintBottom_toBottomOf="@id/btn_analyze"
+                app:layout_constraintEnd_toEndOf="@id/btn_analyze"
+                app:layout_constraintStart_toStartOf="@id/btn_analyze"
+                app:layout_constraintTop_toTopOf="@id/btn_analyze" />
+
+            <include
+                android:id="@+id/container_file_manager"
+                layout="@layout/item_home_file_manager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_analyze" />
+
+            <include
+                android:id="@+id/container_cloud"
+                layout="@layout/item_home_cloud"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/container_file_manager" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_12"
+                android:layout_marginBottom="@dimen/size_12"
+                android:text="@string/recent_upload"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_21"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/recycle_recent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle_recent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_12"
+                android:layout_marginTop="@dimen/size_56"
+                android:layout_marginEnd="@dimen/size_12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/container_cloud" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

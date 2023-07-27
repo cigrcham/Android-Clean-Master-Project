@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_setting"
+    app:startDestination="@id/settingFragment">
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.phonecleaner.storagecleaner.cache.ui.fragment.SettingFragment"
+        android:label="SettingFragment" >
+        <action
+            android:id="@+id/action_settingFragment_to_passcodeFragment"
+            app:destination="@id/passcodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passcodeFragment"
+        android:name="com.phonecleaner.storagecleaner.cache.ui.dialog.PasscodeFragment"
+        android:label="PasscodeFragment" >
+        <action
+            android:id="@+id/action_passcodeFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutMenu"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_70"
+    android:background="@drawable/bg_dialog_bottom_sheet_app">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutRename"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="@dimen/size_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgRenameAccount"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="@dimen/size_0"
+            android:paddingVertical="@dimen/size_10"
+            android:src="@drawable/ic_bottom_sheet_rename"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="@dimen/size_0"
+            android:layout_height="@dimen/size_0"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center"
+            android:text="@string/rename"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgRenameAccount" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutRemove"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="@dimen/size_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgRemove"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="@dimen/size_0"
+            android:paddingVertical="@dimen/size_10"
+            android:src="@drawable/ic_bottom_sheet_remove"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="@dimen/size_0"
+            android:layout_height="@dimen/size_0"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center"
+            android:text="@string/remove"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgRemove" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

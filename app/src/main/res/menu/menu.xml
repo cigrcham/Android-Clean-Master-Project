@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/fragment_my_file"
+        android:contentDescription="@string/my_file"
+        android:icon="@drawable/my_file"
+        android:title="@string/my_file"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/fragment_cooler"
+        android:contentDescription="@string/cooler"
+        android:icon="@drawable/cooler"
+        android:title="@string/cooler"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/fragment_recent"
+        android:contentDescription="@string/recent"
+        android:icon="@drawable/recent"
+        android:title="@string/recent"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/fragment_setting"
+        android:contentDescription="@string/setting"
+        android:icon="@drawable/setting"
+        android:title="@string/setting"
+        app:showAsAction="always" />
+
+</menu>

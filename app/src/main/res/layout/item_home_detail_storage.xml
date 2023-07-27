@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.4"
+        android:padding="@dimen/size_10">
+
+        <app.futured.donut.DonutProgressView
+            android:id="@+id/donut_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:donut_bgLineColor="@color/grey"
+            app:donut_gapAngle="90"
+            app:donut_gapWidth="0"
+            app:donut_strokeWidth="@dimen/size_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_used"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_bold"
+            android:text="@string/_0_0_gb"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/donut_view"
+            app:layout_constraintEnd_toEndOf="@id/donut_view"
+            app:layout_constraintStart_toStartOf="@id/donut_view"
+            app:layout_constraintTop_toTopOf="@id/donut_view" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.6"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="0.9">
+
+        <include
+            android:id="@+id/container_picture"
+            layout="@layout/item_home_progress_video"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            tools:ignore="NestedWeights" />
+
+
+        <include
+            android:id="@+id/container_video"
+            layout="@layout/item_home_progress_picture"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3" />
+
+        <include
+            android:id="@+id/container_document"
+            layout="@layout/item_home_progress_document"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3" />
+    </LinearLayout>
+</LinearLayout>
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="progressColor">
+        <item>#E77E28</item>
+        <item>#6CC0EB</item>
+        <item>#EB6C9C</item>
+        <item>#00BF8C</item>
+        <item>#5F97FF</item>
+    </string-array>
+</resources>

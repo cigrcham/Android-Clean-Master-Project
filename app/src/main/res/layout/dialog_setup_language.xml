@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/size_20"
+    android:background="@drawable/background_card_20">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center"
+        android:text="@string/language"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_21"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rgSelectedLanguage"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rbEnglish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:button="@drawable/bg_checkbox_language"
+            android:padding="@dimen/size_10"
+            android:text="@string/english" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rbVietnamese"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@drawable/bg_checkbox_language"
+            android:padding="@dimen/size_10"
+            android:text="@string/vietnamese" />
+
+<!--        <androidx.appcompat.widget.AppCompatRadioButton-->
+<!--            android:id="@+id/rbFrench"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:button="@drawable/bg_checkbox_language"-->
+<!--            android:padding="@dimen/size_10"-->
+<!--            android:text="@string/french" />-->
+
+<!--        <androidx.appcompat.widget.AppCompatRadioButton-->
+<!--            android:id="@+id/rbGerman"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:button="@drawable/bg_checkbox_language"-->
+<!--            android:padding="@dimen/size_10"-->
+<!--            android:text="@string/german" />-->
+
+<!--        <androidx.appcompat.widget.AppCompatRadioButton-->
+<!--            android:id="@+id/rbIndonesia"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:button="@drawable/bg_checkbox_language"-->
+<!--            android:padding="@dimen/size_10"-->
+<!--            android:text="@string/indonesia" />-->
+
+<!--        <androidx.appcompat.widget.AppCompatRadioButton-->
+<!--            android:id="@+id/rbRussian"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:button="@drawable/bg_checkbox_language"-->
+<!--            android:padding="@dimen/size_10"-->
+<!--            android:text="@string/russian" />-->
+
+<!--        <androidx.appcompat.widget.AppCompatRadioButton-->
+<!--            android:id="@+id/rbSpanish"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:button="@drawable/bg_checkbox_language"-->
+<!--            android:padding="@dimen/size_10"-->
+<!--            android:text="@string/spanish" />-->
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCancel"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="@dimen/size_50"
+        android:layout_marginStart="@dimen/size_40"
+        android:layout_marginTop="@dimen/size_30"
+        android:layout_marginBottom="@dimen/size_16"
+        android:background="@drawable/button_background_color"
+        android:text="@string/cancel"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgSelectedLanguage" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnOK"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="@dimen/size_50"
+        android:layout_marginTop="@dimen/size_30"
+        android:layout_marginEnd="@dimen/size_40"
+        android:layout_marginBottom="@dimen/size_16"
+        android:background="@drawable/button_background_color"
+        android:text="@string/confirm"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rgSelectedLanguage" />
+</androidx.constraintlayout.widget.ConstraintLayout>

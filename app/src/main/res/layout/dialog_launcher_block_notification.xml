@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ctlToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/size_5"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size_8"
+            android:src="@drawable/ic_toolbar_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_10"
+            android:fontFamily="@font/inter_bold"
+            android:text="@string/notifications"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_20"
+            app:layout_constraintBottom_toBottomOf="@id/imgBack"
+            app:layout_constraintStart_toEndOf="@id/imgBack"
+            app:layout_constraintTop_toTopOf="@id/imgBack" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBlockApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size_8"
+            android:src="@drawable/ic_block_app"
+            android:tint="@color/black"
+            android:layout_marginEnd="@dimen/size_4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size_16"
+        android:layout_marginBottom="@dimen/size_15"
+        android:background="@drawable/button_background_color"
+        android:text="@string/block_all_notifications"
+        android:textAllCaps="false"
+        android:textColor="@drawable/button_text_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size_16"
+        app:cardCornerRadius="@dimen/size_16"
+        app:layout_constraintTop_toBottomOf="@id/ctlToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ctlHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size_8">
+
+            <ImageView
+                android:id="@+id/imgPreview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_message"
+                app:layout_constraintBottom_toBottomOf="@id/cbSelectAll"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/cbSelectAll"
+                app:layout_constraintWidth_percent="0.13" />
+
+            <TextView
+                android:id="@+id/tvCountMessage"
+                android:layout_width="@dimen/size_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_12"
+                android:layout_marginEnd="@dimen/size_12"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/cbSelectAll"
+                app:layout_constraintEnd_toStartOf="@id/cbSelectAll"
+                app:layout_constraintStart_toEndOf="@id/imgPreview"
+                app:layout_constraintTop_toTopOf="@id/cbSelectAll" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbSelectAll"
+                android:layout_width="@dimen/size_44"
+                android:layout_height="@dimen/size_44"
+                android:layout_marginEnd="@dimen/size_5"
+                android:button="@null"
+                android:foreground="@drawable/ic_checkbox"
+                android:foregroundGravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_0"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/size_16"
+        android:clipToPadding="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/btnBlock"
+        app:layout_constraintTop_toBottomOf="@id/cvHeader" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

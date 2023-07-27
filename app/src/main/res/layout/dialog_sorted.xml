@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_corners_20"
+    android:padding="@dimen/size_20">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_medium"
+        android:gravity="center"
+        android:text="@string/sort_by"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rgSorted"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rbName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:padding="@dimen/size_10"
+            android:text="@string/sort_by_name" />
+
+        <RadioGroup
+            android:id="@+id/rgName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_50"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rbNameFromAToZ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:padding="@dimen/size_10"
+                android:text="@string/from_a_to_z" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rbNameFromZToA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:padding="@dimen/size_10"
+                android:text="@string/from_z_to_a" />
+
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rbDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size_10"
+            android:text="@string/date" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rbSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size_10"
+            android:text="@string/size" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rbType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:padding="@dimen/size_10"
+            android:text="@string/type" />
+
+        <RadioGroup
+            android:id="@+id/rgType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_50"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rbTypeFromAToZ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:padding="@dimen/size_10"
+                android:text="@string/from_a_to_z" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rbTypeFromZToA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:padding="@dimen/size_10"
+                android:text="@string/from_z_to_a" />
+
+        </RadioGroup>
+
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCancel"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="@dimen/size_50"
+        android:layout_marginStart="@dimen/size_40"
+        android:layout_marginTop="@dimen/size_30"
+        android:background="@drawable/button_background_color"
+        android:text="@string/cancel"
+        android:textColor="@drawable/button_text_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rgSorted" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnOk"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="@dimen/size_50"
+        android:layout_marginTop="@dimen/size_30"
+        android:layout_marginEnd="@dimen/size_40"
+        android:background="@drawable/button_background_color"
+        android:text="@string/confirm"
+        android:textColor="@drawable/button_text_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rgSorted" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

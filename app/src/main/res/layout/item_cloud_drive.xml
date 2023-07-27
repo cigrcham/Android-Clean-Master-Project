@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_drive"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_item_cloud"
+    android:padding="@dimen/size_5"
+    tools:ignore="TextSizeCheck">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_drive"
+        android:layout_width="@dimen/size_40"
+        android:layout_height="@dimen/size_40"
+        android:layout_marginStart="@dimen/size_14"
+        android:layout_marginTop="@dimen/size_14"
+        android:background="@color/white"
+        android:src="@drawable/google_drive"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container_1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/circleImage" />
+
+
+    <LinearLayout
+        android:id="@+id/container_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_12"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/container_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_drive">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_bold"
+            android:text="@string/google_drive"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_21"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:maxLines="1"
+            android:text="@string/minhvu12101998_gmail_com"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_12" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/container_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_26"
+        android:layout_marginBottom="@dimen/size_20"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container_1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:gravity="left|center"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="@string/_14_30_gb"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_15"
+            android:textStyle="bold"
+            tools:ignore="RtlHardcoded" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4">
+
+            <app.futured.donut.DonutProgressView
+                android:id="@+id/donut_drive"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_circle"
+                app:donut_bgLineColor="@color/grey"
+                app:donut_gapAngle="90"
+                app:donut_gapWidth="0"
+                app:donut_strokeWidth="@dimen/size_5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_42"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_10"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/donut_drive"
+                app:layout_constraintEnd_toEndOf="@id/donut_drive"
+                app:layout_constraintStart_toStartOf="@id/donut_drive"
+                app:layout_constraintTop_toTopOf="@id/donut_drive" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

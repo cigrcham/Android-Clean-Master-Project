@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="color_start_gradient">#B35CF6</color>
+    <color name="color_end_gradient">#4375F4</color>
+    <color name="background_progress">#E6F2FF</color>
+    <color name="progress_color">#FEBB04</color>
+    <color name="grayF6F6F6">#F6F6F6</color>
+    <color name="gray606060">#606060</color>
+    <color name="blue0682E8">#0682E8</color>
+    <color name="analytic_color">#218cf0</color>
+    <color name="gray">#A7A7A7</color>
+    <color name="while_29">#4AFFFFFF</color>
+    <color name="blueCooler">#218cf0</color>
+</resources>

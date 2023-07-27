@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/item1"
+        android:layout_width="@dimen/size_30"
+        android:layout_height="@dimen/size_30"
+        android:layout_marginStart="@dimen/size_16"
+        android:layout_marginEnd="@dimen/size_16"
+        android:background="@android:color/transparent"
+        android:src="@drawable/bg_view_white_oval" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/item2"
+        android:layout_width="@dimen/size_30"
+        android:layout_height="@dimen/size_30"
+        android:layout_marginStart="@dimen/size_16"
+        android:layout_marginEnd="@dimen/size_16"
+        android:background="@android:color/transparent"
+        android:src="@drawable/bg_view_white_oval" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/item3"
+        android:layout_width="@dimen/size_30"
+        android:layout_height="@dimen/size_30"
+        android:layout_marginStart="@dimen/size_16"
+        android:layout_marginEnd="@dimen/size_16"
+        android:background="@android:color/transparent"
+        android:src="@drawable/bg_view_white_oval" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/item4"
+        android:layout_width="@dimen/size_30"
+        android:layout_height="@dimen/size_30"
+        android:layout_marginStart="@dimen/size_16"
+        android:layout_marginEnd="@dimen/size_16"
+        android:background="@android:color/transparent"
+        android:src="@drawable/bg_view_white_oval" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/item5"
+        android:layout_width="@dimen/size_30"
+        android:layout_height="@dimen/size_30"
+        android:layout_marginStart="@dimen/size_16"
+        android:layout_marginEnd="@dimen/size_16"
+        android:background="@android:color/transparent"
+        android:src="@drawable/bg_view_white_oval" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/item6"
+        android:layout_width="@dimen/size_30"
+        android:layout_height="@dimen/size_30"
+        android:layout_marginStart="@dimen/size_16"
+        android:layout_marginEnd="@dimen/size_16"
+        android:background="@android:color/transparent"
+        android:src="@drawable/bg_view_white_oval" />
+
+</LinearLayout>

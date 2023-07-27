@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginHorizontal="@dimen/size_16"
+    android:layout_marginBottom="@dimen/size_8"
+    app:cardCornerRadius="@dimen/size_16">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size_8">
+
+        <ImageView
+            android:id="@+id/imgPreview"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="@dimen/size_0"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvTitle"
+            app:layout_constraintBottom_toBottomOf="@id/tvContent"
+            app:layout_constraintWidth_percent="0.13" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_12"
+            android:layout_marginEnd="@dimen/size_12"
+            app:layout_constraintEnd_toStartOf="@id/tvTimeCount"
+            app:layout_constraintStart_toEndOf="@id/imgPreview"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTimeCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_12"
+            android:textSize="@dimen/text_size_12"
+            app:layout_constraintEnd_toStartOf="@id/cbSelected"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="26m ago"/>
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_12"
+            android:layout_marginTop="@dimen/size_10"
+            android:layout_marginEnd="@dimen/size_12"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintEnd_toStartOf="@id/cbSelected"
+            app:layout_constraintStart_toEndOf="@id/imgPreview"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/cbSelected"
+            android:layout_width="@dimen/size_44"
+            android:layout_height="@dimen/size_44"
+            android:layout_marginEnd="@dimen/size_5"
+            android:button="@null"
+            android:foreground="@drawable/ic_checkbox"
+            android:foregroundGravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

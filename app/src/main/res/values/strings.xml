@@ -1,0 +1,200 @@
+<resources>
+    <string name="app_name">Clean Master</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="analyze">Analyze</string>
+    <string name="progress_bar_detail" translatable="false">54.8GB of 63.9 GD available</string>
+    <string name="progress_bar_title">80%</string>
+    <string name="_14_30_gb">14/30 GB</string>
+    <string name="recent_upload">Recent Upload</string>
+    <string name="my_file">My file</string>
+    <string name="cooler">Cooler</string>
+    <string name="recent">Recent</string>
+    <string name="audio">Audio</string>
+    <string name="info_clear_total">"Clean total %d apps.</string>
+    <string name="setting">Setting</string>
+    <string name="notifications">Notifications</string>
+    <string name="start_trial">Start Trial</string>
+    <string name="block_all_notifications">Block all notifications</string>
+    <string name="dialog_block_notifi">FileManager needs permission to use notifications to hide and remove spam notifications, please allow</string>
+    <string name="it_s_free_for_3_days">It’s free for 3 days</string>
+    <string name="premium">Premium</string>
+    <string name="block_apps">Block apps</string>
+    <string name="notify_zip_file_and_folder" translatable="false">Cannot compress both files and folders at the same time</string>
+    <string name="notify_zip_folders" translatable="false">Cannot compress multiple folders with the same item at the same time</string>
+    <string name="apk_junk" translatable="false">Apks</string>
+    <string name="ad_junk" translatable="false">AD junk</string>
+    <string name="cache_junk" translatable="false">Cache junk</string>
+    <string name="residual_junk" translatable="false">Residual junk files</string>
+    <string name="file_hide">HideFile</string>
+    <string name="tap_layout_recent" translatable="false">tap_layout_recent</string>
+    <string name="view_pager" translatable="false">View Pager</string>
+    <string name="item_count">%d item</string>
+    <string name="permission_required">Permission Required</string>
+    <string name="dialog_clean_permission_desc">To use the app, please allow file management permission</string>
+    <string name="cancel">Cancel</string>
+    <string name="accept">Accept</string>
+    <string name="images">Image</string>
+    <string name="album" translatable="false">Album</string>
+    <string name="image">Image</string>
+    <string name="app">App</string>
+    <string name="apps" translatable="false">Apps</string>
+    <string name="apks" translatable="false">Apks</string>
+    <string name="zip_files" translatable="false">Zip Files</string>
+    <string name="music">Music</string>
+    <string name="musics">Musics</string>
+    <string name="song">Song</string>
+    <string name="folder">Folder</string>
+    <string name="video" translatable="false">Video</string>
+    <string name="document">Document</string>
+    <string name="analyzing_similar_files_directly">Analyzing similar files directly ...</string>
+    <string name="done">Done</string>
+    <string name="_100" translatable="false">100%</string>
+    <string name="_130" translatable="false">130</string>
+    <string name="analytics_storage">Analytics Storage</string>
+    <string name="cloud">Cloud</string>
+    <string name="minhvu12101998_gmail_com" translatable="false">minhvu12101998@gmail.com</string>
+    <string name="google_drive" translatable="false">Google Drive</string>
+    <string name="_42" translatable="false">42%</string>
+    <string name="drop_box" translatable="false">Drop Box</string>
+    <string name="error_preview_image">Error preview image</string>
+    <string name="properties">Properites</string>
+    <string name="name">Name: </string>
+    <string name="path">Path: </string>
+    <string name="size">Size: </string>
+    <string name="modification_date">Modification date: </string>
+    <string name="format">Format:</string>
+    <string name="selected">Selected(%d)</string>
+    <string name="select_all">Select All</string>
+    <string name="unselect_all">Unselect All</string>
+    <string name="screen_shot">ScreenShot</string>
+    <string name="screen_shots">ScreenShots</string>
+    <string name="larger_apps">Larger Apps</string>
+    <string name="larger_app">Larger App</string>
+    <string name="duplicate_file">Duplicate File</string>
+    <string name="duplicate_files">Duplicate Files</string>
+    <string name="miscellaneous_files">Miscellaneous Files</string>
+    <string name="language">Language</string>
+    <string name="english">English</string>
+    <string name="vietnamese">Vietnamese</string>
+    <string name="widget_photos" translatable="false">Widget photos</string>
+    <string name="reset_passcode">Reset passcode</string>
+    <string name="set_passcode">Set a passcode</string>
+    <string name="french">French</string>
+    <string name="indonesia" translatable="false">Indonesia</string>
+    <string name="spanish" translatable="false">Spanish</string>
+    <string name="russian">Russian</string>
+    <string name="german">German</string>
+    <string name="confirm">Confirm</string>
+    <string name="rate_us">Rate us</string>
+    <string name="share">Share</string>
+    <string name="help">Help</string>
+    <string name="_0" translatable="false">0</string>
+    <string name="dot" translatable="false">.</string>
+    <string name="back">Back</string>
+    <string name="notify_length_passcode">Password must be six characters long. Please re-enter</string>
+    <string name="notify_same_passcode">The re-entered password is not the same. Please re-enter</string>
+    <string name="notify_success_passcode">Set password for app successfully</string>
+    <string name="notify_re_passcode">Do you want to reset your password?</string>
+    <string name="input_passcode">Input passcode</string>
+    <string name="passcode">Passcode</string>
+    <string name="re_passcode">Re-passcode</string>
+    <string name="default_setting">Default Setting</string>
+    <string name="notify_default_setting">Do you want to restore the settings?</string>
+    <string name="notify_passcode">The password is incorrect. Please re-enter</string>
+    <string name="cannot_read_file">Can not read file</string>
+    <string name="copy">Copy</string>
+    <string name="move">Move</string>
+    <string name="delete">Delete</string>
+    <string name="rename">Rename</string>
+    <string name="convert">Convert</string>
+    <string name="hide">Hide</string>
+    <string name="share_file">Share File</string>
+    <string name="favorites">Favorites</string>
+    <string name="open_with">Open With</string>
+    <string name="paste">Paste</string>
+    <string name="create">Create</string>
+    <string name="restock" translatable="false">Restock</string>
+    <string name="uninstall">Uninstall</string>
+    <string name="remove">Remove</string>
+    <string name="extract" translatable="false">Extract</string>
+    <string name="dropbox" translatable="false">Drop Box</string>
+    <string name="download">Download</string>
+    <string name="internal_storage">Internal Storage</string>
+    <string name="copy_to">Copy to</string>
+    <string name="move_to">Move to</string>
+    <string name="file_processing">File processing</string>
+    <string name="notify_share_folder">Can\'t share directory</string>
+    <string name="notify_upload_drop_box">Can\'t share folder to dropbox</string>
+    <string name="view">View</string>
+    <string name="display">Display</string>
+    <string name="list_view">List view</string>
+    <string name="date">Date</string>
+    <string name="type">Type</string>
+    <string name="from_a_to_z">From A to Z</string>
+    <string name="from_z_to_a">From Z to A</string>
+    <string name="grid_view">Grid view</string>
+    <string name="sort_by">Sort by</string>
+    <string name="notify_rename">Name cannot be left blank</string>
+    <string name="create_folder">Create folder</string>
+    <string name="notify_cannot_sort_album">Can\'t sort album</string>
+    <string name="new_name">New name</string>
+    <string name="notify_cannot_sort_apk">Can\'t sort</string>
+    <string name="sort_by_name">Name</string>
+    <string name="notify_move_recycle_bin">Move file to Recycle Bin?</string>
+    <string name="delete_permanently">Delete permanently</string>
+    <string name="common_error">An error occurred, please check again</string>
+    <string name="notify_add_favorite">Successfully added file/folder to favorite list</string>
+    <string name="message_fail">An error occurred, please try again</string>
+    <string name="recent_tab_layout">Recent</string>
+    <string name="favorite_tab_layout">Favorite</string>
+    <string name="notify_fail_favorite">Don\'t support folder</string>
+    <string name="title">Title</string>
+    <string name="files_recover">Files Recover</string>
+    <string name="this_app_help_you_avoid_annoying" translatable="false">This app help you avoid annoying</string>
+    <string name="use">Use</string>
+    <string name="block_notifies">Block Notifies</string>
+    <string name="scanning">Scanning...</string>
+    <string name="file_recovery">File Recovery</string>
+    <string name="recover">Recover</string>
+    <string name="select">Select</string>
+    <string name="recovery_success">Recovery Success</string>
+    <string name="Filter">Filter</string>
+    <string name="six_months">Six months</string>
+    <string name="one_year">One year</string>
+    <string name="two_years">Two years</string>
+    <string name="all">All</string>
+    <string name="recover_history">Recover history</string>
+    <string name="add_account" translatable="false">+ Add account</string>
+    <string name="_0_0" translatable="false">0.0</string>
+    <string name="_0_0_gb" translatable="false">0.0 GB</string>
+    <string name="picture">Picture</string>
+    <string name="_0_0_" translatable="false">0.0 %</string>
+    <string name="recycle">Recycle Bin</string>
+    <string name="notify_exit">Notify Exit</string>
+    <string name="clean">Clean</string>
+    <string name="scan_junk_now" translatable="false">Your device has junk files, clean it now</string>
+    <string name="junk_cleaner">Junk cleaner</string>
+    <string name="notify_failed_folder" translatable="false">Can\'t manipulate folders</string>
+    <string name="notify_download_failed">Download failed</string>
+    <string name="notify_download_success">Successful download</string>
+    <string name="notify_feature_google" translatable="false">This feature will now be updated in the near future. We are very sorry for this inconvenience</string>
+    <string name="file_manager">File Manager</string>
+    <string name="internal">Internal</string>
+    <string name="document_0">Document</string>
+    <string name="c">C</string>
+    <string name="notify_logout">Do you want to sign out of this account?</string>
+    <string name="logout">LOG OUT</string>
+    <string name="app_decs">Easy memory management</string>
+    <string name="email">Email</string>
+    <string name="_482_byte">482 byte</string>
+    <string name="_16_8_2022">16/8/2022</string>
+    <string name="delete_from_recent">Delete from recent</string>
+    <string name="add_to_favorite">Add to favorite</string>
+    <string name="display_information">Display information</string>
+    <string name="upload">Upload</string>
+    <string name="delete_from_favorite">Delete from favorite</string>
+    <string name="delete_fail">Delete fail</string>
+    <string name="notify_remove_favorite">Remove favorite</string>
+    <string name="about_us">About us</string>
+    <string name="content_about_us">We develop a large number of small, fast products for short jobs, such as automatic facial makeup without wasting time, automatically compose interviews, automatically find cheap airline tickets, automatically find saleoff orders, automatically find customers who need to rent a house, automatically find customers to sell houses, automatically look up, automatically find and sell houses. customer inquiries. Our company has 200 employees in 3 different locations, the headquarters in Louis city is the place where training and human resource development is combined, the sales department is located at 69 Vạn Phuc. Congratulations for your interest in our company and for taking the time to read this article. Thank you.</string>
+</resources>
