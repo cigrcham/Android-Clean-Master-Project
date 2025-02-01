@@ -15,4 +15,3 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Clean Master"
 include ':app'
-

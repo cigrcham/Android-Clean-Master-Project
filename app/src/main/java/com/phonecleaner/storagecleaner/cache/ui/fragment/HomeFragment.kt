@@ -60,10 +60,11 @@ class HomeFragment : BaseFragment(), View.OnClickListener {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         activity?.let { act ->
             act.window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+            @Suppress("DEPRECATION")
             act.window.statusBarColor = ContextCompat.getColor(act, R.color.grayF6F6F6)
         }
         binding.shimmerLayout.apply {

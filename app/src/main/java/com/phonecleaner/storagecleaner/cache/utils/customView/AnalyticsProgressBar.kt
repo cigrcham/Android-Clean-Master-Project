@@ -52,12 +52,10 @@ class AnalyticsProgressBar : View {
         centerPoint.set(w / 2f, h / 2f)
     }
 
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        canvas?.let {
-            drawBackground(it)
-            drawProgress(it)
-        }
+        drawBackground(canvas)
+        drawProgress(canvas)
     }
 
     private fun drawProgress(canvas: Canvas) {

@@ -24,13 +24,11 @@ import java.io.IOException
 import javax.inject.Inject
 import javax.inject.Singleton
 
-
 @Singleton
 class Repository @Inject constructor(
     @ApplicationContext private val context: Context,
     private val database: AppDatabase,
 ) {
-
     suspend fun setFirstInstall(isCheck: Boolean) {
         context.dataStore.edit {
             it[IS_FIRST_TIME_INSTALLING] = isCheck

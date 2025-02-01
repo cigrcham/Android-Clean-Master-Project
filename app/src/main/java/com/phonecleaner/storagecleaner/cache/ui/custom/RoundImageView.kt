@@ -20,7 +20,7 @@ class RoundedImageView @JvmOverloads constructor(
         }
     }
 
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
         val corners = floatArrayOf(
             cornerRadius,
             cornerRadius,
@@ -36,7 +36,7 @@ class RoundedImageView @JvmOverloads constructor(
             0f, 0f, width.toFloat(), height.toFloat(), corners, Path.Direction.CW
         )
 
-        canvas?.clipPath(path)
+        canvas.clipPath(path)
         super.onDraw(canvas)
     }
 }

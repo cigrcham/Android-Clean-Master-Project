@@ -24,10 +24,10 @@ import timber.log.Timber
 import java.io.File
 import javax.inject.Inject
 
-
 @HiltViewModel
 class AppViewModel @Inject constructor(
-    @ApplicationContext private val context: Context, private val repository: Repository
+    @ApplicationContext private val context: Context,
+    private val repository: Repository
 ) : BaseViewModel() {
 
     var listAppLiveData = MutableStateLiveData<ArrayList<AppInstalled>>()

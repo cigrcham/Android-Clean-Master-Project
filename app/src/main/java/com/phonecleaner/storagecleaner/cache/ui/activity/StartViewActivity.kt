@@ -56,11 +56,6 @@ class StartViewActivity : BaseActivity() {
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-
-    }
-
     private fun gotoMain() {
         if (passCode.isBlank() || passCode.isEmpty()) {
             intent = Intent(this@StartViewActivity, MainActivity::class.java)

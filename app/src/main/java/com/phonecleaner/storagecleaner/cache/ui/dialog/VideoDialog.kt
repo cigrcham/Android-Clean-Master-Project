@@ -29,7 +29,7 @@ class VideoDialog : DialogFragment(), MediaPlayer.OnPreparedListener, SurfaceHol
     val mp = MediaPlayer()
     var fileApp: FileApp? = null
     private val mHandler: Handler = Handler()
-    lateinit var surfaceHolder: SurfaceHolder
+    private lateinit var surfaceHolder: SurfaceHolder
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?

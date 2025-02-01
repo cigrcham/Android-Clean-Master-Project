@@ -1,11 +1,14 @@
 package com.phonecleaner.storagecleaner.cache.data.database
 
-import androidx.room.*
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import androidx.room.Update
 import com.phonecleaner.storagecleaner.cache.data.model.entity.Account
 
 @Dao
 abstract class AccountDao {
-
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     abstract fun insert(account: Account)
 

@@ -2,6 +2,7 @@ package com.phonecleaner.storagecleaner.cache.ui.activity
 
 import android.Manifest
 import android.animation.ValueAnimator
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.ActivityNotFoundException
 import android.content.Context
@@ -15,7 +16,6 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Environment
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.WindowManager
@@ -66,7 +66,6 @@ import com.phonecleaner.storagecleaner.cache.extension.requestPermissionManagerS
 import com.phonecleaner.storagecleaner.cache.extension.shareApplication
 import com.phonecleaner.storagecleaner.cache.extension.shareMultiFile
 import com.phonecleaner.storagecleaner.cache.extension.toast
-import com.phonecleaner.storagecleaner.cache.services.TrackingAppInstallService
 import com.phonecleaner.storagecleaner.cache.ui.dialog.AudioDialog
 import com.phonecleaner.storagecleaner.cache.ui.dialog.LogoutDialog
 import com.phonecleaner.storagecleaner.cache.ui.dialog.PropertiesDialog
@@ -257,17 +256,13 @@ class MainActivity : BaseActivity() {
      * Service
      */
     private fun startServiceTrackingAppInstall() {
-        try {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                applicationContext.startForegroundService(
-                    Intent(this@MainActivity, TrackingAppInstallService::class.java)
-                )
-            } else {
-                startService(Intent(this@MainActivity, TrackingAppInstallService::class.java))
-            }
-        } catch (e: java.lang.Exception) {
-            e.printStackTrace()
-        }
+//        try {
+//            applicationContext.startForegroundService(
+//                Intent(this@MainActivity, TrackingAppInstallService::class.java)
+//            )
+//        } catch (e: java.lang.Exception) {
+//            e.printStackTrace()
+//        }
     }
 
     /**
@@ -428,7 +423,6 @@ class MainActivity : BaseActivity() {
             }
 
             SetMenuFunction.MOVE_TO_INTERNAL -> {
-                Log.d("Test1234", "handleFunctionsBottomMenu: ${SingletonMenu.getInstance().type}")
                 handleMoveToInternalFunction()
             }
 
@@ -623,6 +617,7 @@ class MainActivity : BaseActivity() {
         propertiesDialog.show(supportFragmentManager, Constants.DIALOG_PROPERTIES)
     }
 
+    @SuppressLint("UnsafeIntentLaunch")
     fun navigateToOpenAccountScreen(account: Account) {
         intent = Intent(this, DropBoxActivity::class.java)
         intent.putExtra(Constants.DROPBOX_EMAIL, account.email)
@@ -740,22 +735,16 @@ class MainActivity : BaseActivity() {
         }
     }
 
+    @SuppressLint("UnsafeIntentLaunch")
     private fun openIntentInstallApk(fileAppApk: FileApp) {
         try {
             val fileApk = File(fileAppApk.path)
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                val apkUri = FileProvider.getUriForFile(
-                    this, applicationContext.packageName + ".provider", fileApk
-                )
-                intent = Intent(Intent.ACTION_INSTALL_PACKAGE)
-                intent.data = apkUri
-                intent.flags = Intent.FLAG_GRANT_READ_URI_PERMISSION
-            } else {
-                val apkUri = Uri.fromFile(fileApk)
-                intent = Intent(Intent.ACTION_VIEW)
-                intent.setDataAndType(apkUri, "application/vnd.android.package-archive")
-                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-            }
+            val apkUri = FileProvider.getUriForFile(
+                this, applicationContext.packageName + ".provider", fileApk
+            )
+            intent = Intent(Intent.ACTION_INSTALL_PACKAGE)
+            intent.data = apkUri
+            intent.flags = Intent.FLAG_GRANT_READ_URI_PERMISSION
             startActivity(intent)
         } catch (ex: Exception) {
             Timber.tag(myTag).e("Install apk failed: ${ex.message}")
@@ -763,9 +752,6 @@ class MainActivity : BaseActivity() {
     }
 
     fun navigateToOpenAppScreen(file: AppInstalled) {
-        // check mime type cua file
-        // neu la anh thi navigate to detailsImageFragment
-        // neu la file kahc thi intent.action view
     }
 
     fun uninstallApp() {
@@ -945,7 +931,7 @@ class MainActivity : BaseActivity() {
 
 
     // Get temperature celsius phone
-    val sensorListener: SensorEventListener = object : SensorEventListener {
+    private val sensorListener: SensorEventListener = object : SensorEventListener {
         override fun onSensorChanged(event: SensorEvent) {
             if (event.sensor.type == Sensor.TYPE_AMBIENT_TEMPERATURE) {
                 celsiusPhoneLiveData.value = "${event.values[0]}"
@@ -957,8 +943,8 @@ class MainActivity : BaseActivity() {
     }
 
     fun getTemperatureCelsius() {
-        var sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
-        var temperatureSensor = sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE)
+        val sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
+        val temperatureSensor = sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE)
         sensorManager.registerListener(
             sensorListener, temperatureSensor, SensorManager.SENSOR_DELAY_NORMAL
         )

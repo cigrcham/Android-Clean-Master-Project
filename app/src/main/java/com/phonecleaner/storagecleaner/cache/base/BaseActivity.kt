@@ -1,6 +1,5 @@
 package com.phonecleaner.storagecleaner.cache.base
 
-import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
@@ -52,7 +51,7 @@ open class BaseActivity : AppCompatActivity() {
         val locale = Locale(displayLanguage)
         setDefault(locale)
         config.locale = locale
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) createConfigurationContext(config)
+        createConfigurationContext(config)
         resources.updateConfiguration(config, resources.displayMetrics)
         dataViewModel.setLanguage(displayLanguage)
     }

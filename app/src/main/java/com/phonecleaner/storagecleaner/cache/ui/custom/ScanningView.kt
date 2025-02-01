@@ -109,23 +109,21 @@ class ScanningView : View {
     }
 
     @SuppressLint("DrawAllocation")
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        canvas?.let {
-            canvas.drawBitmap(
-                bitmap, centerPoint.x - bitmap.width / 2f, centerPoint.y - bitmap.height / 2, paint
-            )
-            paint.shader = LinearGradient(
-                gradiantRect.left,
-                gradiantRect.bottom,
-                gradiantRect.left,
-                gradiantRect.top,
-                Color.parseColor("#00FFFFFF"),
-                Color.parseColor("#B3FFFFFF"),
-                Shader.TileMode.CLAMP
-            )
-            canvas.drawRoundRect(gradiantRect, 4f.toPx, 4f.toPx, paint)
-        }
+        canvas.drawBitmap(
+            bitmap, centerPoint.x - bitmap.width / 2f, centerPoint.y - bitmap.height / 2, paint
+        )
+        paint.shader = LinearGradient(
+            gradiantRect.left,
+            gradiantRect.bottom,
+            gradiantRect.left,
+            gradiantRect.top,
+            Color.parseColor("#00FFFFFF"),
+            Color.parseColor("#B3FFFFFF"),
+            Shader.TileMode.CLAMP
+        )
+        canvas.drawRoundRect(gradiantRect, 4f.toPx, 4f.toPx, paint)
     }
 
     companion object {

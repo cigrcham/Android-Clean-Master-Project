@@ -1,6 +1,7 @@
 package com.phonecleaner.storagecleaner.cache.di
 
 import android.content.Context
+import androidx.room.Room
 import com.phonecleaner.storagecleaner.cache.data.database.AppDatabase
 import dagger.Module
 import dagger.Provides
@@ -12,7 +13,10 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 class ApplicationModule {
-    @Singleton
     @Provides
-    fun provideAppDatabase(@ApplicationContext context: Context) = AppDatabase.getInstance(context)
+    @Singleton
+    fun provideAppDatabase(@ApplicationContext context: Context): AppDatabase = Room.databaseBuilder(
+        context,
+        AppDatabase::class.java, "database-name"
+    ).build()
 }

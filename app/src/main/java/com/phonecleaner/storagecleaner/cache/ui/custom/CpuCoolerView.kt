@@ -91,33 +91,31 @@ class CpuCoolerView : View {
     }
 
     @SuppressLint("DrawAllocation")
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        canvas?.let { it: Canvas ->
-            it.drawCircle(centerPoint.x, centerPoint.y, CIRCLE_RADIUS.toPx, strokePaint)
-            it.drawRoundRect(
-                roundRectF, LINE_RADIUS.toPx / 2, LINE_RADIUS.toPx / 2, strokePaint
-            )
-            it.drawCircle(
-                centerPoint.x, centerPoint.y, CIRCLE_RADIUS.toPx, fillPaint
-            )
-            it.drawRoundRect(
-                roundRectF, LINE_RADIUS.toPx / 2, LINE_RADIUS.toPx / 2, fillPaint
-            )
+        canvas.drawCircle(centerPoint.x, centerPoint.y, CIRCLE_RADIUS.toPx, strokePaint)
+        canvas.drawRoundRect(
+            roundRectF, LINE_RADIUS.toPx / 2, LINE_RADIUS.toPx / 2, strokePaint
+        )
+        canvas.drawCircle(
+            centerPoint.x, centerPoint.y, CIRCLE_RADIUS.toPx, fillPaint
+        )
+        canvas.drawRoundRect(
+            roundRectF, LINE_RADIUS.toPx / 2, LINE_RADIUS.toPx / 2, fillPaint
+        )
 
-            listSnow.forEach {
-                canvas.save()
-                canvas.scale(it.scale, it.scale)
-                canvas.rotate(it.rotation, it.startX.toFloat(), it.startY.toFloat())
-                canvas.drawBitmap(
-                    bitmapSnow, it.startX.toFloat(), it.startY.toFloat(), appPaint
-                )
-                canvas.restore()
-            }
+        listSnow.forEach {
+            canvas.save()
+            canvas.scale(it.scale, it.scale)
+            canvas.rotate(it.rotation, it.startX.toFloat(), it.startY.toFloat())
+            canvas.drawBitmap(
+                bitmapSnow, it.startX.toFloat(), it.startY.toFloat(), appPaint
+            )
+            canvas.restore()
+        }
 
-            listIconData.forEach {
-                canvas.drawBitmap(it.icon, null, it.rect, appPaint)
-            }
+        listIconData.forEach {
+            canvas.drawBitmap(it.icon, null, it.rect, appPaint)
         }
     }
 

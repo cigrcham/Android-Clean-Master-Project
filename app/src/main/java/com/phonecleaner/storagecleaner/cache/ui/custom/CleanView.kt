@@ -4,7 +4,13 @@ import android.animation.ValueAnimator
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.Resources
-import android.graphics.*
+import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.LinearGradient
+import android.graphics.Paint
+import android.graphics.PointF
+import android.graphics.RectF
+import android.graphics.Shader
 import android.util.AttributeSet
 import android.view.View
 import androidx.core.graphics.ColorUtils
@@ -115,9 +121,8 @@ class CleanView : View {
     )
 
     @SuppressLint("DrawAllocation")
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        canvas?.let { canvas ->
             paint.shader = null
             paint.style = Paint.Style.FILL
 
@@ -130,7 +135,7 @@ class CleanView : View {
             paint.shader = null
             paint.color = Color.WHITE
             paint.style = Paint.Style.FILL
-            canvas.drawCircle(centerPoint.x, centerPoint.y, CIRCLE_3_RADIUS.toPx, paint)
+        canvas.drawCircle(centerPoint.x, centerPoint.y, CIRCLE_3_RADIUS.toPx, paint)
 
             paint.shader = LinearGradient(
                 0f,
@@ -141,7 +146,7 @@ class CleanView : View {
                 Color.parseColor("#F1F0F0"),
                 Shader.TileMode.MIRROR
             )
-            canvas.drawCircle(centerPoint.x, centerPoint.y, CIRCLE_2_RADIUS.toPx + 1f.toPx, paint)
+        canvas.drawCircle(centerPoint.x, centerPoint.y, CIRCLE_2_RADIUS.toPx + 1f.toPx, paint)
 
             paint.shader = LinearGradient(
                 0f,
@@ -152,9 +157,7 @@ class CleanView : View {
                 Color.WHITE,
                 Shader.TileMode.MIRROR
             )
-            canvas.drawCircle(centerPoint.x, centerPoint.y, CIRCLE_1_RADIUS.toPx, paint)
-
-        }
+        canvas.drawCircle(centerPoint.x, centerPoint.y, CIRCLE_1_RADIUS.toPx, paint)
     }
 
     companion object {

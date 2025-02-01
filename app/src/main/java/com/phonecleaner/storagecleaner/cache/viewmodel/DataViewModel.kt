@@ -1,13 +1,11 @@
 package com.phonecleaner.storagecleaner.cache.viewmodel
 
-import android.content.Context
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.phonecleaner.storagecleaner.cache.base.BaseViewModel
 import com.phonecleaner.storagecleaner.cache.data.model.entity.Account
 import com.phonecleaner.storagecleaner.cache.data.repository.Repository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
@@ -15,7 +13,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class DataViewModel @Inject constructor(
-    private val repository: Repository, @ApplicationContext private val context: Context
+    private val repository: Repository,
 ) : BaseViewModel() {
     private val myTag: String = this::class.java.simpleName
     val passcode: Flow<String> = repository.getPasscode
@@ -55,5 +53,4 @@ class DataViewModel @Inject constructor(
             accountLiveData.postValue(repository.getAccount(email))
         }
     }
-
 }

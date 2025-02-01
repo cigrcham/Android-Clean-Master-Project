@@ -1,6 +1,11 @@
 package com.phonecleaner.storagecleaner.cache.data.database
 
-import androidx.room.*
+import androidx.room.Dao
+import androidx.room.Delete
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import androidx.room.Update
 import com.phonecleaner.storagecleaner.cache.data.model.entity.AppInstalled
 import kotlinx.coroutines.flow.Flow
 
@@ -26,5 +31,5 @@ abstract class AppBlockDao {
     abstract fun update(fileHide: AppInstalled)
 
     @Delete
-    abstract fun deleteItem(apps: AppInstalled?)
+    abstract fun deleteItem(apps: AppInstalled)
 }

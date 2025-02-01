@@ -18,23 +18,22 @@ import com.phonecleaner.storagecleaner.cache.R
 import com.phonecleaner.storagecleaner.cache.ui.activity.MainActivity
 
 class TrackingAppInstallService : Service() {
+    @SuppressLint("ForegroundServiceType")
     override fun onCreate() {
-        createNotificationChannel(CHANNEL_ID)
-        val notification = createNotification()
-        if (ActivityCompat.checkSelfPermission(
-                this, Manifest.permission.POST_NOTIFICATIONS
-            ) == PackageManager.PERMISSION_GRANTED
-        ) {
-            NotificationManagerCompat.from(applicationContext)
-                .notify(NOTIFICATION_SERVICE_ID, notification)
-            startForeground(NOTIFICATION_SERVICE_ID, notification)
-            registerAppInstallReceiver()
-        }
-
+//        createNotificationChannel(CHANNEL_ID)
+//        val notification = createNotification()
+//        if (ActivityCompat.checkSelfPermission(
+//                this, Manifest.permission.POST_NOTIFICATIONS
+//            ) == PackageManager.PERMISSION_GRANTED
+//        ) {
+//            NotificationManagerCompat.from(applicationContext)
+//                .notify(NOTIFICATION_SERVICE_ID, notification)
+//            startForeground(NOTIFICATION_SERVICE_ID, notification)
+//            registerAppInstallReceiver()
+//        }
     }
 
     private fun createNotification(): Notification {
-
         val notification =
             NotificationCompat.Builder(this, CHANNEL_ID).setSmallIcon(R.mipmap.ic_launcher)
                 .setContentTitle(getString(R.string.app_name))

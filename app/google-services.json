@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "84299466764",
+    "project_id": "clean-masst",
+    "storage_bucket": "clean-masst.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:84299466764:android:882bb79339a0f716394629",
+        "android_client_info": {
+          "package_name": "com.phonecleaner.storagecleaner.cache"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpvXJlDJvqYQc97qOBnnttcUO8Hgtout8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

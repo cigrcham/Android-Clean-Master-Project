@@ -1,11 +1,12 @@
-package com.phonecleaner.storagecleaner.base.dropBox.internal.api
+package com.phonecleaner.storagecleaner.cache.base.dropBox.internal.api
 
 import android.content.Context
 import android.util.Log
 import androidx.appcompat.app.AlertDialog
 import com.dropbox.core.DbxRequestConfig
 import com.dropbox.core.android.Auth
-import com.phonecleaner.storagecleaner.cache.base.dropBox.internal.api.DropboxAppConfig
+import com.phonecleaner.storagecleaner.base.dropBox.internal.api.DropboxApiWrapper
+import com.phonecleaner.storagecleaner.base.dropBox.internal.api.DropboxCredentialUtil
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

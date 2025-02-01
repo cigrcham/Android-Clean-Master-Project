@@ -5,6 +5,7 @@ import android.content.pm.PackageManager
 import android.service.notification.NotificationListenerService
 import com.phonecleaner.storagecleaner.cache.data.database.AppDatabase
 import com.phonecleaner.storagecleaner.cache.data.model.entity.MessageNotifi
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -13,12 +14,13 @@ class BlockNotification : NotificationListenerService() {
     var database: AppDatabase? = null
     override fun onCreate() {
         super.onCreate()
-        database = AppDatabase.getInstance(this@BlockNotification)
+//        database = AppDatabase.getInstance(this@BlockNotification)
 //        if (!EventBus.getDefault().isRegistered(this)) {
 //            EventBus.getDefault().register(this)
 //        }
     }
 
+    @OptIn(DelicateCoroutinesApi::class)
     override fun onListenerConnected() {
         super.onListenerConnected()
         GlobalScope.launch(Dispatchers.IO) {
